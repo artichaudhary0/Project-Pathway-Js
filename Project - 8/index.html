@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Menu</title>
+    <link href="styles.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="navigation" id="navigation">
+        <span style="--i:0;--x:-1;--y:0;"><icon-icon name="camera-outline"></icon-icon></span>
+        <span style="--i:8;--x:1;--y:-1;"><icon-icon name="time-outline"></icon-icon></span>     
+        <div class="image-container" id="imageContainer">
+            <img src="/Project - 8/assets/one.png" alt="Image 1">
+            <img src="/Project - 8/assets/two.png" alt="Image 2">
+            <img src="/Project - 8/assets/three.png" alt="Image 3">
+            <img src="/Project - 8/assets/four.png" alt="Image 4">
+        </div>
+    </div>
+
+    <script>
+        const navigation = document.getElementById('navigation');
+        navigation.addEventListener('click', function() {
+            navigation.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

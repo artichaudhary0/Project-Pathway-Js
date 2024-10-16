@@ -1,0 +1,56 @@
+
+.navigation {
+    position: relative;
+    width: 70px;
+    height: 70px;
+    background: #212532;
+    border-radius: 10px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: width 1s, height 1s; 
+    overflow: hidden;
+}
+.navigation.active {
+    width: 200px;
+    height: 200px;
+}
+
+.navigation span {
+    position: absolute;
+    width: 7px;
+    height: 7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff;
+    border-radius: 50%;
+}
+
+.image-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    opacity: 0; 
+    visibility: hidden; 
+    transition: opacity 0.5s ease, visibility 0.5s ease; 
+}
+
+.navigation.active .image-container {
+    opacity: 1; 
+    visibility: visible; 
+}
+
+.image-container img {
+    width: 60px;
+    height: auto;
+    margin: 5px;
+    border-radius: 10px;
+}
