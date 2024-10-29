@@ -1,0 +1,40 @@
+body{
+    margin: 0;
+}
+.hero-section {
+    min-height: 100vh;
+    background-image: url("./images/background1.png");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.audio-paragraph-container {
+    margin-left: 15rem;
+ }
+
+.hero-section p {
+    font-family: "Salsa", cursive;
+    font-weight: 400;
+    font-size: 46.67px;
+    line-height: 57.22px;
+    max-width: 400px;
+    
+}
+.audio-player{
+    background-color: #FBD8A4;
+    max-width: 496px;
+    border-radius: 45.92px;
+    display: flex;
+    max-height: 61px;
+    justify-content: center;
+    
+}
+.audio-player p {
+    font-size: 16px;
+}
+
+audio::-webkit-media-controls-play-button,
+     audio::-webkit-media-controls-panel {
+     background-color: #FBD8A4;
+     color: #FBD8A4;
+     
+     }
