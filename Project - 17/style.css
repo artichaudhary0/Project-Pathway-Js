@@ -4,14 +4,13 @@ body {
   }
   
   .jhalar {
-    width: 220px;
-    margin-bottom: -180px;
+    /* width: 220px;
+    margin-bottom: -180px; */
   }
   
   .hero-section {
-    /* min-height: 100vh; */
     background-color: #F99501;
-    background-image: url("./images/background1.png");
+    background-image: url(./images/background1.png);
     background-size: cover;
     background-repeat: no-repeat;
   }
@@ -43,11 +42,12 @@ body {
     background-color: #f99501;
     padding-block: 1em;
     padding-inline: 1rem;
+    padding: 50px;
   }
   
   .lakshmi-ganesha-img {
-    max-width: 900px;
-    width: 100vw;
+    max-width:80%;
+    width: 100%;
     display: block;
     margin-inline: auto;
   }
@@ -112,6 +112,7 @@ body {
     max-width: 772px;
     display: flex;
     margin-inline: auto;
+    max-width:80%;
   }
   
   .lakshmi-ganesha-card img {
@@ -193,4 +194,3 @@ body {
       font-size: 1rem;
     }
   }
-  
