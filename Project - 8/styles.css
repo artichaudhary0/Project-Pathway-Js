@@ -1,6 +1,10 @@
 
+
 .navigation {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 70px;
     height: 70px;
     background: #212532;
@@ -12,6 +16,7 @@
     transition: width 1s, height 1s; 
     overflow: hidden;
 }
+
 .navigation.active {
     width: 200px;
     height: 200px;
