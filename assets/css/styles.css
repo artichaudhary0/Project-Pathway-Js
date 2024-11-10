@@ -1,3 +1,4 @@
+/* Root CSS Variables for Default Theme */
 :root {
     --bg-color: #f4f7f9;
     --card-bg-color: #fff8e6;
@@ -6,6 +7,7 @@
     --navbar-bg-color: rgba(51, 51, 51, 0.7);
 }
 
+/* Body and General Layout */
 body {
     font-family: 'Arial', sans-serif;
     background: var(--bg-color);
@@ -25,8 +27,10 @@ body {
 }
 
 .project-item {
-    width: 500px;
-    height: 600px;
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    aspect-ratio: 5 / 6; /* Maintain consistent aspect ratio */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -66,7 +70,7 @@ body {
     justify-content: center;
     align-items: center;
     box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-    padding-bottom: 20px;
+    padding: 10px;
 }
 
 .project-image {
@@ -97,9 +101,7 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 15px 20px;
-    background: rgba(51, 51, 51, 0.7); 
-    /* background: white; */
-    /* background: var(--navbar-bg-color); */
+    background: var(--navbar-bg-color);
     backdrop-filter: blur(10px);
     color: #fff;
     border-radius: 10px;
@@ -139,7 +141,6 @@ body {
     color: var(--text-color);
 }
 
-/* Back to Top Button */
 #backToTopBtn {
     position: fixed;
     bottom: 40px;
@@ -183,9 +184,32 @@ body {
 .theme-5 { background-color: #ff7979; }
 
 /* Responsive Adjustments */
+@media (max-width: 1024px) {
+    #project-list {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 30px;
+        padding: 100px 20px 20px;
+    }
+    .project-item h3 {
+        font-size: 1.2em;
+    }
+    .navbar {
+        padding: 10px 15px;
+        width: 95%;
+    }
+    .navbar-logo h2 {
+        font-size: 1.5em;
+    }
+}
+
 @media (max-width: 768px) {
     #project-list {
         grid-template-columns: 1fr;
+        gap: 20px;
+        padding: 80px 10px 10px;
+    }
+    .project-item h3 {
+        font-size: 1.1em;
     }
     .navbar-links {
         display: none;
@@ -193,5 +217,20 @@ body {
     .navbar-logo {
         flex: 1;
         text-align: center;
+    }
+    .navbar-logo h2 {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-logo h2 {
+        font-size: 1.2em;
+    }
+    .project-item h3 {
+        font-size: 1em;
+    }
+    .project-item p {
+        font-size: 0.9em;
     }
 }
