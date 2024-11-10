@@ -1,4 +1,4 @@
-/* Root CSS Variables for Default Theme */
+
 :root {
     --bg-color: #f4f7f9;
     --card-bg-color: #fff8e6;
@@ -7,7 +7,7 @@
     --navbar-bg-color: rgba(51, 51, 51, 0.7);
 }
 
-/* Body and General Layout */
+
 body {
     font-family: 'Arial', sans-serif;
     background: var(--bg-color);
@@ -19,8 +19,8 @@ body {
 #project-list {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 50px;
-    padding: 120px 40px 40px;
+    gap: 30px;
+    padding: 100px 20px 20px;
     background: var(--bg-color);
     justify-items: center;
     align-items: center;
@@ -28,14 +28,14 @@ body {
 
 .project-item {
     width: 100%;
-    max-width: 500px;
+    max-width: 400px;
     height: auto;
-    aspect-ratio: 5 / 6; /* Maintain consistent aspect ratio */
+    aspect-ratio: 4 / 5;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     transition: transform 0.3s ease-in-out;
 }
 
@@ -51,12 +51,12 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
     transition: box-shadow 0.3s ease-in-out, transform 0.3s ease;
 }
 
 .outer-oval:hover {
-    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.15);
     transform: translateY(-5px);
 }
 
@@ -69,12 +69,12 @@ body {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.1);
     padding: 10px;
 }
 
 .project-image {
-    width: 95%;
+    width: 90%;
     height: auto;
     object-fit: cover;
     border-radius: 10px;
@@ -82,15 +82,15 @@ body {
 }
 
 .project-item h3 {
-    font-size: 1.4em;
+    font-size: 1.2em;
     font-weight: bold;
     color: var(--text-color);
-    margin-bottom: 10px;
+    margin-bottom: 8px;
     text-align: center;
 }
 
 .project-item p {
-    font-size: 1em;
+    font-size: 0.9em;
     color: #666;
     line-height: 1.4;
     text-align: center;
@@ -100,38 +100,39 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 20px;
+    padding: 10px 15px;
     background: var(--navbar-bg-color);
     backdrop-filter: blur(10px);
     color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
     position: fixed;
-    top: 20px;
+    top: 15px;
     left: 50%;
     transform: translateX(-50%);
-    width: 90%;
-    max-width: 1000px;
+    width: 85%;
+    max-width: 900px;
     z-index: 1000;
 }
 
 .navbar-logo h2 {
-    font-size: 1.8em;
-    color: var(--card-accent-color);
+    font-size: 1.5em;
+    color: white;
+    /* color: var(--card-accent-color); */
     margin: 0;
 }
 
 .navbar-links {
     display: flex;
     list-style-type: none;
-    gap: 20px;
+    gap: 15px;
 }
 
 .navbar-links a {
     text-decoration: none;
     color: var(--card-accent-color);
-    font-size: 1.1em;
-    padding: 5px 10px;
+    font-size: 1em;
+    padding: 4px 8px;
     border-radius: 5px;
     transition: color 0.3s, background-color 0.3s;
 }
@@ -141,15 +142,16 @@ body {
     color: var(--text-color);
 }
 
+/* Back to Top Button */
 #backToTopBtn {
     position: fixed;
-    bottom: 40px;
-    right: 40px;
-    width: 50px;
-    height: 50px;
+    bottom: 30px;
+    right: 30px;
+    width: 45px;
+    height: 45px;
     background-color: var(--card-accent-color);
     color: var(--text-color);
-    font-size: 24px;
+    font-size: 20px;
     border: none;
     border-radius: 50%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
@@ -166,12 +168,12 @@ body {
 /* Navbar Theme Buttons */
 .theme-buttons {
     display: flex;
-    gap: 10px;
+    gap: 8px;
 }
 
 .theme-button {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     border-radius: 50%;
     cursor: pointer;
     border: 1px solid #ccc;
@@ -187,26 +189,23 @@ body {
 @media (max-width: 1024px) {
     #project-list {
         grid-template-columns: repeat(2, 1fr);
-        gap: 30px;
-        padding: 100px 20px 20px;
-    }
-    .project-item h3 {
-        font-size: 1.2em;
+        gap: 20px;
+        padding: 80px 15px 15px;
     }
     .navbar {
-        padding: 10px 15px;
-        width: 95%;
+        padding: 8px 12px;
+        width: 90%;
     }
     .navbar-logo h2 {
-        font-size: 1.5em;
+        font-size: 1.4em;
     }
 }
 
 @media (max-width: 768px) {
     #project-list {
         grid-template-columns: 1fr;
-        gap: 20px;
-        padding: 80px 10px 10px;
+        gap: 15px;
+        padding: 70px 10px 10px;
     }
     .project-item h3 {
         font-size: 1.1em;
@@ -219,18 +218,18 @@ body {
         text-align: center;
     }
     .navbar-logo h2 {
-        font-size: 1.3em;
+        font-size: 1.2em;
     }
 }
 
 @media (max-width: 480px) {
     .navbar-logo h2 {
-        font-size: 1.2em;
+        font-size: 1em;
     }
     .project-item h3 {
         font-size: 1em;
     }
     .project-item p {
-        font-size: 0.9em;
+        font-size: 0.8em;
     }
 }
