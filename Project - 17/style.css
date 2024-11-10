@@ -4,6 +4,7 @@ body {
   }
   
   .hero-section {
+    height: 100vh;
     background-color: #F99501;
     background-image: url(./images/background1.png);
     background-size: cover;
