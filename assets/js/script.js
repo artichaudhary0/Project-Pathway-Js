@@ -24,7 +24,7 @@ const projects = [
     { name: "Api with Description", path: "./Project - 22" ,image: "assets/images/project22.png", description: "Api with multiple data company, colors, description, name:title, price, image"},
     { name: "Fetch Random User", path: "./Project - 23" ,image: "assets/images/project23.png", description: "Fetch Random User from server"},
     { name: "Description", path: "./Project - 24" ,image: "assets/images/project24.png", description: "Description with Tab bar"},
-    { name: "Project 25", path: "./Project - 25" ,image: "assets/images/project2.png", description: "A simple color generator."},
+    { name: "Password Strength Meter", path: "./Project - 25" ,image: "assets/images/project25.png", description: "Checks how much your password strength"},
     { name: "Project 26", path: "./Project - 26" ,image: "assets/images/project2.png", description: "A simple color generator."},
     { name: "ToolTip", path: "./Project - 27" ,image: "assets/images/project27.png", description: "A way to show description using tooltip"},
     { name: "Animation Counter", path: "./Project - 28" ,image: "assets/images/project28.png", description: "A animation counter till certain value reached."},
