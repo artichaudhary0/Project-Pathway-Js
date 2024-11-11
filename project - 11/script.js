@@ -1,54 +1,137 @@
-const todoInput = document.getElementById("todo-input");
-const addBtn = document.getElementById("add-button");
-const todoList = document.getElementById("todo-list");
 
-let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+let currentEditIndex = null;
 
-// save task
-const saveTasks = () => {
-  localStorage.setItem("tasks", JSON.stringify(tasks));
-};
+document.addEventListener("DOMContentLoaded", displayRecords);
 
-// Dom render
+function getRecords() {
+  const records = localStorage.getItem("records");
+  return records ? JSON.parse(records) : [];
+}
 
-const renderTasks = () => {
-  todoList.innerHTML = "";
-  tasks.forEach((task, index) => {
-    const li = document.createElement("li");
-    li.className = task.completed ? "Completed" : "";
-    li.innerHTML = `
-    <span>${task.text}</span>
-    <div>
-        <button onclick = "toggleTask(${index})">${
-      task.completed ? "Undo" : "Completed"
-    }</button>
-        <button onclick="deleteTask(${index})">Delete</button>
-    </div>
-    `;
-    todoList.appendChild(li);
-  });
-};
+function displayRecords() {
+  const recordList = document.getElementById("recordList");
+  recordList.innerHTML = "";
 
-addBtn.addEventListener("click", () => {
-  const taskText = todoInput.value.trim();
-  if (taskText !== "") {
-    tasks.push({ text: taskText, completed: false });
-    saveTasks();
-    renderTasks();
-    todoInput.value = "";
+  const records = getRecords();
+
+  if (records.length === 0) {
+    recordList.innerHTML = `
+    <tr><td colspan="4">No records available</td></tr>`;
+    return;
   }
-});
+  
+  records.forEach((record, index) => {
+    recordList.innerHTML += `
+      <tr>
+        <td>${record.name}</td>
+        <td>${record.details}</td>
+        <td>${new Date(record.date).toLocaleString()}</td>
+        <td>
+          <button onclick="loadRecord(${index})">Edit</button>
+          <button onclick="deleteRecord(${index})">Delete</button>
+        </td>
+      </tr>`;
+  });
+}
 
-const toggleTask = (index) => {
-  tasks[index].completed = !tasks[index].completed;
-  saveTasks();
-  renderTasks();
-};
+function addRecord() {
+  const nameInput = document.getElementById("name").value.trim();
+  const detailsInput = document.getElementById("details").value.trim();
 
-const deleteTask = (index) => {
-  tasks.splice(index, 1);
-  saveTasks();
-  renderTasks();
-};
+  if (!nameInput || !detailsInput) {
+    alert("Both name and details are required.");
+    return;
+  }
 
-renderTasks();
+  const newRecord = {
+    id: generateUniqueId(),
+    name: nameInput,
+    details: detailsInput,
+    date: new Date(),
+  };
+
+  const records = getRecords();
+  records.push(newRecord);
+  localStorage.setItem("records", JSON.stringify(records));
+
+  clearForm();
+  displayRecords();
+}
+
+function loadRecord(index) {
+  const records = getRecords();
+  const record = records[index];
+
+  document.getElementById("name").value = record.name;
+  document.getElementById("details").value = record.details;
+
+  currentEditIndex = index;
+
+  document.getElementById("addButton").style.display = "none";
+  document.getElementById("updateButton").style.display = "inline";
+}
+
+function updateRecord() {
+  const records = getRecords();
+
+  records[currentEditIndex].name = document.getElementById("name").value.trim();
+  records[currentEditIndex].details = document
+    .getElementById("details")
+    .value.trim();
+  records[currentEditIndex].date = new Date();
+
+  localStorage.setItem("records", JSON.stringify(records));
+
+  clearForm();
+  displayRecords();
+
+  document.getElementById("addButton").style.display = "inline";
+  document.getElementById("updateButton").style.display = "none";
+
+  currentEditIndex = null;
+}
+
+function deleteRecord(index) {
+  const records = getRecords();
+  records.splice(index, 1);
+  localStorage.setItem("records", JSON.stringify(records));
+  displayRecords();
+}
+
+function searchRecords() {
+  const query = document.getElementById("search").value.toLowerCase();
+  const records = getRecords();
+  const filteredRecords = records.filter((record) =>
+    record.name.toLowerCase().includes(query)
+  );
+
+  const recordList = document.getElementById("recordList");
+  recordList.innerHTML = "";
+
+  if (filteredRecords.length === 0) {
+    recordList.innerHTML = `<tr><td colspan="4">No records found</td></tr>`;
+    return;
+  }
+
+  filteredRecords.forEach((record, index) => {
+    recordList.innerHTML += `
+      <tr>
+        <td>${record.name}</td>
+        <td>${record.details}</td>
+        <td>${new Date(record.date).toLocaleString()}</td>
+        <td>
+          <button onclick="loadRecord(${index})">Edit</button>
+          <button onclick="deleteRecord(${index})">Delete</button>
+        </td>
+      </tr>`;
+  });
+}
+
+function generateUniqueId() {
+  return Math.floor(Math.random() * Date.now());
+}
+
+function clearForm() {
+  document.getElementById("name").value = "";
+  document.getElementById("details").value = "";
+}

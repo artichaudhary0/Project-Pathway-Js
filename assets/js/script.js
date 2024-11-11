@@ -11,7 +11,7 @@ const projects = [
     { name: "Animation", path: "./Project - 8" ,image: "assets/images/project8.png", description: "A simple Animation to open box."},
     { name: "Menu", path: "./Project - 9" ,image: "assets/images/project9.png", description: "Filter menu according to the selection"},
     { name: "Scroll", path: "./Project - 10" ,image: "assets/images/project10.png", description: "Scroll on website"},
-    { name: "Project 11", path: "./Project - 11" ,image: "assets/images/project1.png", description: "A simple color generator."},
+    { name: "Student Record", path: "./Project - 11" ,image: "assets/images/project11.png", description: "Student records Management"},
     { name: "Countdown", path: "./Project - 12" ,image: "assets/images/project12.png", description: "A simple Countdown"},
     { name: "Paragraph", path: "./Project - 13" ,image: "assets/images/project13.png", description: "A Paragraph generator"},
     { name: "Todo", path: "./Project - 14" ,image: "assets/images/project14.png", description: "Todo and Local Storage"},
