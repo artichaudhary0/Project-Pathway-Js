@@ -57,7 +57,7 @@
 <h3>Installation</h3>
 <ol>
   <li><strong>Clone the Repository</strong>
-    <pre><code>git clone https://github.com/yourusername/Basic-to-Advanced-JS-Projects.git</code></pre>
+    <pre><code>git clone https://github.com/artichaudhary0/Project-Pathway-Js.git</code></pre>
   </li>
   <li><strong>Navigate to the Project Folder</strong>
     <pre><code>cd Basic-to-Advanced-JS-Projects</code></pre>
@@ -121,7 +121,7 @@ Basic-to-Advanced-JS-Projects/
 
 <h2>💬 Contact</h2>
 <p><strong>Arti Chaudhary</strong><br>
-For questions, suggestions, or feedback, please feel free to reach out via <a href="https://www.linkedin.com/in/yourprofile">LinkedIn</a> or open an issue in this repository.</p>
+For questions, suggestions, or feedback, please feel free to reach out via <a href="https://www.linkedin.com/in/artichaudhary0/">LinkedIn</a> or open an issue in this repository.</p>
 
 </body>
 
