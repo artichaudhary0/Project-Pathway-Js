@@ -22,31 +22,60 @@
 <h2>📋 Project List</h2>
 
 <h3>Basic Projects</h3>
-<ol>
+
+<ul>
   <li><strong>Random Color Generator</strong> - Generates random colors from a predefined array and random hex codes.</li>
   <li><strong>Simple Counter</strong> - A counter that increases, decreases, and resets.</li>
   <li><strong>User Reviews Carousel</strong> - Displays user reviews with Next, Previous, and Random buttons.</li>
-</ol>
-
-<h3>Intermediate Projects</h3>
-<ol start="4">
   <li><strong>Responsive Navbar</strong> - A navigation bar responsive to mobile and web screens.</li>
   <li><strong>Slide-in Sidebar</strong> - Sidebar with slide-in and close functionality on hamburger icon click.</li>
   <li><strong>Modal Popup</strong> - Opens and closes a modal window.</li>
-</ol>
-
-<h3>Advanced Projects</h3>
-<ol start="7">
   <li><strong>FAQ Accordion</strong> - Reveals answers to questions with toggling icons for show/hide.</li>
   <li><strong>Expand and Collapse Button</strong> - Toggles visibility of multiple options with a single button click.</li>
   <li><strong>Static Restaurant Menu</strong> - Static menu with filters for Breakfast, Lunch, Shakes, and Dinner.</li>
-  <li>... <em>(Continue listing all projects up to 35)</em></li>
-</ol>
+  <li><strong>Scroll Effect</strong> - Adds smooth scrolling to a webpage.</li>
+  <li><strong>Countdown Timer</strong> - A countdown timer with start, pause, and reset functionality.</li>
+  <li><strong>Paragraph Generator</strong> - A generator that creates multiple paragraphs on click.</li>
+  <li><strong>To-Do List with Local Storage</strong> - A To-Do list app that stores tasks in the browser's local storage.</li>
+  <li><strong>Image Slider</strong> - A slider that allows the user to navigate through images using next and previous buttons.</li>
+  <li><strong>Two Counters</strong> - Two counters that are synchronized with each other.</li>
+  <li><strong>Happy Diwali Wishes</strong> - A simple interactive webpage wishing users Happy Diwali.</li>
+</ul>
+
+<h3>Intermediate Projects</h3>
+<ul>
+  <li><strong>Filter Menu</strong> - A menu filter that allows users to filter items based on categories.</li>
+  <li><strong>Toggle Light/Dark Mode</strong> - A webpage that toggles between light and dark modes.</li>
+  <li><strong>API Data Fetcher</strong> - A project that fetches data from a public API and displays it on the page.</li>
+  <li><strong>API with Multiple Data</strong> - A project that fetches and displays different types of data such as company, colors, descriptions, name, title, price, and images from an API.</li>
+  <li><strong>Fetch Random User</strong> - Fetches random user data from an API and displays it.</li>
+  <li><strong>Tab Bar with Content</strong> - A project that allows switching between different content using a tab bar.</li>
+  <li><strong>Password Strength Meter</strong> - A meter that checks the strength of a password based on its complexity.</li>
+  <li><strong>Tooltip Display</strong> - A project that shows descriptions of elements using tooltips when hovered.</li>
+  <li><strong>Animation Counter</strong> - A counter that animates as it counts to a specific number.</li>
+  <li><strong>Custom Video Player</strong> - A simple video player with custom controls for play, pause, volume, etc.</li>
+  <li><strong>Pagination</strong> - A pagination system to divide a large list of items into smaller, more manageable chunks.</li>
+  <li><strong>Fetch API</strong> - A simple project that fetches data from a public API and displays it dynamically on the page.</li>
+  <li><strong>Student Records Management</strong> - A project for managing student records with add, edit, and delete functionalities.</li>
+</ul>
+
+<h3>Advanced Projects</h3>
+<ul>
+  <li><strong>Expense Tracker</strong> - A personal expense tracker app that stores data using local storage.</li>
+  <li><strong>Weather App</strong> - A weather forecasting app that fetches weather data from an external API and displays it.</li>
+  <li><strong>E-commerce Shopping Cart</strong> - A fully functional e-commerce cart system where users can add, remove, and update products.</li>
+  <li><strong>Interactive Maps</strong> - A project that shows interactive maps and allows users to zoom, scroll, and view different locations.</li>
+  <li><strong>Real-Time Chat App</strong> - A real-time chat application where users can send and receive messages instantly using WebSockets or Firebase.</li>
+  <li><strong>Movie Finder</strong> - A movie finder app that fetches movie data using an API and lets users search for movies.</li>
+  <li><strong>Photo Gallery</strong> - A photo gallery with search and filter functionality that fetches images from an API or local storage.</li>
+  <li><strong>Online Quiz App</strong> - A quiz application that allows users to answer questions and get a score at the end.</li>
+  <li><strong>Note Taking App</strong> - A simple note-taking application with features like adding, editing, and deleting notes.</li>
+  <li><strong>Blog App</strong> - A simple blog application where users can create, edit, and delete blog posts.</li>
+  <li><strong>Interactive Dashboard</strong> - A dashboard displaying various statistics and data visualizations.</li>
+</ul>
 
 <hr>
-
 <h2>🛠️ Getting Started</h2>
-
 <h3>Prerequisites</h3>
 <ul>
   <li>Basic knowledge of HTML, CSS, and JavaScript</li>
