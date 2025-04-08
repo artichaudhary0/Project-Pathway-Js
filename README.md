@@ -3,7 +3,7 @@
 
 <p>
   A collection of <strong>40 JavaScript projects</strong> ranging from basic to advanced levels.
-  This project collection is perfect for beginners and intermediate developers looking to deepen their JavaScript skills. 
+  This project collection is perfect for beginners, intermediate and advance developers looking to deepen their JavaScript skills. 
   Each project covers key JavaScript concepts, from DOM manipulation and event handling to working with APIs and asynchronous programming.
 </p>
 
