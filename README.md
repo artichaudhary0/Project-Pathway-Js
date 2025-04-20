@@ -14,7 +14,7 @@
   <li><strong>Goal</strong>: Build a strong foundation in JavaScript and create a portfolio-worthy project collection</li>
 </ul>
 
-<h2>🔥 Featured Projects</h2>
+<h2>📱 Featured Projects</h2>
 <p>Starting with simpler projects like a <strong>Calculator</strong>, <strong>To-Do List</strong>, and <strong>Quiz App</strong>, you'll gain confidence with basic JavaScript operations. Advanced projects, such as a <strong>Weather App</strong>, <strong>Expense Tracker</strong>, and <strong>E-commerce Cart</strong>, introduce more complex concepts and functionalities, allowing you to progressively build your skills.</p>
 
 <hr>
